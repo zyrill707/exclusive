@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var age = document.getElementsByName("age")[0].value;
         var email = document.getElementsByName("email")[0].value;
     
-        fetch("/submit-form", {
+        fetch("/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
