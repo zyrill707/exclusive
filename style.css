@@ -1,0 +1,66 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("images.jpeg");
+  background-repeat: no-repeat;
+  background-size: 1000px 2000px;
+}
+.cont{
+  display:flex;
+  flex-direction: column;
+  width:300px;
+  justify-content: center;
+  padding-left:30px;
+  align-items:center;
+  margin:auto;
+  padding-top:100px;
+  font-size:25px;
+}
+
+.cont p{
+  font-size:15px;
+  margin-left:20px;
+}
+
+.card{
+  display:flex;
+  width:200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  margin:auto;
+  margin-top:50px;
+  border-radius:5px;
+  box-shadow:0px 4px 5px black;
+}
+
+.card #msg{
+  font-size:17px;
+  line-height: 1.6;
+  margin:2px 2px;
+  font-weight: 500;
+}
+
+#btn, #submitBtn{
+  border:none;
+  background-color:pink;
+  padding:5px 10px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+
+.card input{
+  display:flex;
+  flex-direction: column;
+  border:none;
+  border-bottom:1px solid gold;
+  padding:5px 5px;
+}
+
+.card input:focus{
+  outline:none;
+}
