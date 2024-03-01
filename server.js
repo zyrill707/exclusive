@@ -2,16 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("submitBtn").addEventListener("click", function(event) {
         event.preventDefault();
     
-        var name = document.getElementsByName("name")[0].value;
-        var age = document.getElementsByName("age")[0].value;
-        var email = document.getElementsByName("email")[0].value;
+        var form = document.getElementById("myForm");
+        var formData = new FormData(form);
     
         fetch("/", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json"
+              "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: JSON.stringify({ name: name, age: age, email: email })
+            body: new URLSearchParams(formData).toString()
           })
           .then(response => {
             if (response.ok) {
